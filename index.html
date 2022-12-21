@@ -89,6 +89,18 @@
           session = 'PM';
         }
 
+        if (s == 0) {
+          s = "00";
+        }
+
+        if (s > 0 && s < 10) {
+          s = `0${s}`;
+        }
+
+        if (m > 0 && m < 10) {
+          m = `0${m}`;
+        }
+
         let time = h + ':' + m + ':' + s + ' ' + session;
 
         document.querySelector('.clock').innerText = time;
