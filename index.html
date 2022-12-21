@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="simple js clock" />
+
     <title>JS Clock</title>
   </head>
 
@@ -85,6 +87,22 @@
         if (h > 12) {
           h = h - 12;
           session = 'PM';
+        }
+
+        if (s == 0) {
+          s = "00";
+        }
+
+        if (s > 0 && s < 10) {
+          s = `0${s}`;
+        }
+
+        if (m == 0) {
+          m = "00";
+        }
+
+        if (m > 0 && m < 10) {
+          m = `0${m}`;
         }
 
         let time = h + ':' + m + ':' + s + ' ' + session;
